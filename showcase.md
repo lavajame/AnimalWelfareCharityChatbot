@@ -6,7 +6,7 @@
 > hi there - am thinking about getting a new dog but unsure what to look for - i have two teenage children and they are kind and like going on rambles in the country - and we live close to a park, so that's good. i do work 8am-6pm and the kids are at school in those hours so the dog would be on its own a lot. i also cannot afford much in way of vets bills, so can you consider this factor in selecting a dog please - what advice can you give me
 
 ## Retrieved Context (RAG)
-Top 10 items retrieved from `context_data.json`:
+Top 5 items retrieved from `context_data.json`:
 
 ```text
 What are the costs of dog ownership for people with limited time?: Low-energy breeds and automated feeders may reduce costs, but vet care remains essential.
@@ -18,66 +18,52 @@ What are the costs of dog ownership for people with limited budgets?: Budget-fri
 What are the costs of dog ownership for people with limited space?: Small breeds and compact living spaces may reduce costs, but vet visits and food still apply.
 
 What are the costs of caring for a small breed dog?: Small breeds have lower food costs ($20â€“$50/month) but may require more frequent vet visits for health issues.
-
-What breed is good for people with limited time?: Low-energy breeds like the Basset Hound or Corgi are ideal for owners with busy schedules.
-
-What are the costs of dog ownership for families with children?: Families may need to budget for toys, training classes, and vet visits, costing $200â€“$1,000+ monthly.
-
-What are the costs of caring for a mixed-breed dog?: Mixed breeds often have lower health risks but may still require routine vet care and vaccinations.
-
-What are the costs of caring for a breeder dog?: Breeder dogs may require specialized diets, health screenings, and breeding-related expenses.
-
-What are the costs of dog ownership for elderly owners?: Elderly owners may need to budget for senior dog food, vet visits, and mobility aids, costing $200â€“$1,000+ monthly.
 ```
 
 ## AI Response
-Okay, this is a great question – choosing a dog is a big decision, especially with your lifestyle and budget! Let’s break down what you need to consider, keeping in mind your limited time and resources. Here’s some advice tailored to your situation:
+Okay, let’s break down the costs of dog ownership for you with two teenagers and a limited time, considering your specific circumstances. It’s fantastic you’re thinking about this carefully – it’s a big commitment! Here’s a breakdown of what to expect, focusing on affordability and your lifestyle:
 
-**1. Understanding Your Needs & Lifestyle – Prioritizing Low-Maintenance is Key**
+**1. Estimated Annual Costs (with your priorities in mind):**
 
-* **Your Time is Precious:** You’re working a 8am-6pm shift, and the kids are at school. This means a dog needs to be relatively low-maintenance. Think about *how much* time you realistically have for walks, training, and playtime.
-* **Teenage Children:** Their attention spans are shorter. A dog needs to be genuinely affectionate and responsive to *you*, not just someone who can entertain them.
-* **Rural Setting:** Parks are fantastic, but also means the dog will be largely alone, which is a significant commitment.
+*   **Food:** $200 - $500 (budget-friendly breeds, focusing on dry food is often cheaper)
+*   **Vet Care (Routine):** $100 - $300 (This is where you’ll likely need to be flexible.  Early preventative care is *crucial* with a limited budget – vaccinations, parasite prevention, and a basic check-up).  Factor in potential emergencies – you’ll need a small buffer.
+*   **Pet Supplies (Leash, collar, toys, bedding, etc.):** $50 - $150 (Start with the essentials, and build up as the dog grows).
+*   **Training/Classes (Highly Recommended):** $50 - $150 (Focus on basic obedience and socialization, especially with teenagers.  These can be costly, but vital for a well-behaved dog).
+*   **Grooming (If needed):** $50 - $100 (Daily brushing is a must for short-haired breeds, but occasional baths and nail trims).
+*   **Dog Park Fees (If applicable):** $50 - $150 (Highly variable depending on the park.)
 
-**2. Dog Breed Recommendations (Considering Your Criteria)**
 
-Given your situation, let's focus on breeds that are generally good for low-energy, independent dogs with a love for the outdoors:
+**Total Estimated Range: $550 - $1,100+** – this is a *rough estimate*, and can vary significantly based on breed, location, and your choices.
 
-* **Basset Hound:**  Low-energy, gentle, and adaptable to smaller spaces. They’re happy with short walks and plenty of time alone. Their lower energy levels make them a good fit for a busy schedule.
-* **Corgi (Miniature or Standard):**  Active, but not overly demanding. They’re intelligent and trainable, enjoying walks and playtime. They’re also relatively low-maintenance in terms of grooming.
-* **Basenji:** These dogs are independent and don't require a lot of attention. They enjoy short walks and are happy to spend time alone.
+**2. Cost Considerations Given Your Lifestyle:**
 
-**3. Cost Considerations – Realistic Budgeting**
+*   **Time Constraints:** This is *critical*.  You're already working a full 8am-6pm schedule.  A dog will need dedicated time – walks, playtime, training – but it’s a limited amount.  **Don't overcommit.**
+*   **Teenage Involvement:**  Your kids are involved, which is great!  But remember, they need to *learn* responsibility.  They need to understand that the dog needs consistent care and that they are responsible for the dog’s well-being.  **Start with basic training and socialization.**
+*   **Limited Budget:**  Let’s be realistic.  **Focus on a smaller, lower-maintenance breed.**  Avoid fancy breeds or expensive accessories initially.
 
-* **Initial Costs:** (approximate - prices can vary greatly)
-    * **Initial Costs:** $500 - $1,500 (depending on breed and breeder) – Consider adopting from a rescue or shelter first to save on initial costs.
-    * **Food:** $30 - $75/month (based on food type) - Budget this carefully, especially if you’re adopting.
-    * **Treats/Toys:** $10 - $20/month – Small toys are key!
-* **Ongoing Costs:**
-    * **Vet Care:** *This is where you'll need to be cautious*.  Look for vets with reasonable rates and prioritize preventative care (vaccinations, parasite control).  *Estimate: $50-100/year*.
-    * **Food:** $30 - $75/month (Again, consider a budget)
-    * **Licensing & Registration:** $20-50/year (check local requirements)
-    * **Pet Insurance (Highly Recommended):**  $30-100/month - This can be a huge benefit to have in case of emergencies.
+**3. Breed Recommendations (Considering your criteria):**
 
-**4.  Key Things to Focus On (Given Limited Budget & Time)**
+*   **Miniature/Toy Breeds:**  (8-15 lbs)  Generally less expensive, lower grooming needs, and can handle more independent play. Examples: Beagle, Cavalier King Charles Spaniel, French Bulldog (be careful with wrinkles!).
+*   **Greyhounds:**  (55-70 lbs) Surprisingly low energy, but need a good walk each day.
+*   **Poodles (Miniature & Toy):** Intelligent, relatively low-shedding, and can be trained.
 
-* **Training:**  *Absolutely crucial*.  Even low-energy breeds need training – obedience, recall, and socialization.  Consider a short, focused training class. ($50-$100/class)
-* **Exercise:** Short, frequent walks are better than long, infrequent ones. 15-20 minutes of focused activity is great.
-* **Socialization:** Early socialization is vital for any dog, but especially for teenagers. 
-* **Love & Attention:**  Your dogs will need your affection and attention, even if it’s short bursts.
+**4.  Important Considerations – Reducing Costs:**
 
-**5. Resources to Explore**
+*   **Rescue/Adoption:**  Adopting from a rescue is usually *much* more affordable than buying from a breeder.  You’ll get a dog with a known history, and often, they’ll be looking for a loving home.  Be prepared for a bit of a commitment – they often need extra attention.
+*   **Foster:**  Consider fostering a dog – you’re providing temporary care, and the dog can be permanently adopted if you like it.
+*   **DIY:**  Get creative with training and enrichment.  Puzzle toys, short walks, and mental stimulation can keep your dog engaged without costly training classes.
 
-* **ASPCA:** [https://www.aspca.org/](https://www.aspca.org/) - Offers breed information, adoption resources, and pet care tips.
-* **Rescue Websites:** [https://www.rescuedogs.org/](https://www.rescuedogs.org/) -  You can find dogs needing homes.
-* **Local Veterinarians:** Research vets in your area – look for reviews and see if they offer affordable services.
 
-**To help me give you even more personalized advice, could you tell me:**
+**5.  Resources to Help You:**
 
-*   **What’s your approximate monthly budget for a dog, including food, vet care, and other supplies?** (A range is fine!)
-*   **Are there any breeds you absolutely *don't* want?** (e.g., high-energy, prone to certain issues)
-*   **What kind of activities do the kids enjoy that you'd like the dog to participate in?** (e.g., hiking, playing fetch, just being present)
+*   **ASPCA (American Society for the Prevention of Cruelty to Animals):** [https://www.aspca.org/](https://www.aspca.org/) – Great for resources, breed information, and finding local shelters.
+*   **Breed-Specific Rescue Organizations:** (e.g., Golden Retriever Rescue, Beagle Rescue) – Often have local resources and information.
+
+**To help me give you even more tailored advice, could you tell me:**
+
+*   What's your *absolute maximum* budget you’re comfortable with *per month* (including food, vet, and supplies)?
+*   Are there any specific breeds you're leaning towards (even if it's just a general idea)?
 
 ---
-*Response generated in 3.94 seconds.*
+*Response generated in 3.05 seconds.*
 *Model: gemma3:1b | Embeddings: nomic-embed-text*

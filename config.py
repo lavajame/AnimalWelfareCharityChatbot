@@ -3,7 +3,7 @@
 # Model Settings
 MODEL_NAME = "gemma3:1b"
 EMBEDDING_MODEL_NAME = "nomic-embed-text"
-RETRIEVAL_K = 10
+RETRIEVAL_K = 5 # Number of top relevant documents to retrieve
 
 
 # System Message (Personality)
