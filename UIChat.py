@@ -1,7 +1,9 @@
 import os
 import json
 from datetime import datetime
+import time
 import streamlit as st
+
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_core.chat_history import InMemoryChatMessageHistory
@@ -134,7 +136,7 @@ if user_input:
     if retriever:
         retrieved_docs = retriever.invoke(user_input)
         if retrieved_docs:
-            context_text = "\n\n".join([doc.page_content for doc in retrieved_docs[:3]])
+            context_text = "\n\n".join([doc.page_content for doc in retrieved_docs[:config.RETRIEVAL_K]])
             user_input_with_context = f"Context:\n{context_text}\n\nQuestion: {user_input}"
     
     if not st.session_state.messages:
@@ -159,7 +161,10 @@ if user_input:
     
     final_messages = [SystemMessage(content=system_prompt)] + history_messages[:-1] + [last_msg_with_context]
     
+    start_time = time.time()
     response = llm.invoke(final_messages)
+    end_time = time.time()
+    response_time = end_time - start_time
 
     st.session_state.chat_history.add_ai_message(response.content)
     st.session_state.messages.append(HumanMessage(content=user_input))
@@ -167,5 +172,7 @@ if user_input:
     save_history(st.session_state.messages)
 
     st.chat_message("assistant", avatar="\U0001F916").write(response.content)
+    st.caption(f"Response generated in {response_time:.2f} seconds")
+
 
 

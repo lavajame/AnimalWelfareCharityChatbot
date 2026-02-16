@@ -3,6 +3,8 @@
 # Model Settings
 MODEL_NAME = "qwen3:8b"
 EMBEDDING_MODEL_NAME = "nomic-embed-text"
+RETRIEVAL_K = 10
+
 
 # System Message (Personality)
 SYSTEM_MESSAGE = """Welcome to Dogs Trust! 🐾
