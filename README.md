@@ -5,7 +5,7 @@ A fully local, privacy-focused AI chatbot built with **LangChain**, **Ollama**, 
 ## 🔧 Features
 
 - **LLM-Powered Chat**  
-  Runs completely offline using local models (e.g., `mistral:7b`) via [Ollama](https://ollama.com).
+  Runs completely offline using local models (`gemma3:1b` for chat, `nomic-embed-text` for embeddings) via [Ollama](https://ollama.com).
 
 - **Streamlit Interface**  
   A modern web chat UI with avatars, personality configuration, and persistent chat memory.
