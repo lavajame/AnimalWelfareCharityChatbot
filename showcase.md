@@ -1,4 +1,4 @@
-# Infrastructure Showcase: Dogs Trust Chatbot Assistant
+# Infrastructure Showcase: Dog Welfare Chatbot Assistant
 
 **Repository:** [Animal Welfare Charity Chatbot](https://github.com/AnimalWelfareCharityChatbot)
 
@@ -31,73 +31,53 @@ What are the costs of dog ownership for elderly owners?: Elderly owners may need
 ```
 
 ## AI Response
-Thank you for sharing your situation! It sounds like you’re looking for a dog that fits your lifestyle, budget, and family dynamics. Here’s a tailored guide to help you choose the best dog for your needs:
+Okay, this is a great question – choosing a dog is a big decision, especially with your lifestyle and budget! Let’s break down what you need to consider, keeping in mind your limited time and resources. Here’s some advice tailored to your situation:
+
+**1. Understanding Your Needs & Lifestyle – Prioritizing Low-Maintenance is Key**
+
+* **Your Time is Precious:** You’re working a 8am-6pm shift, and the kids are at school. This means a dog needs to be relatively low-maintenance. Think about *how much* time you realistically have for walks, training, and playtime.
+* **Teenage Children:** Their attention spans are shorter. A dog needs to be genuinely affectionate and responsive to *you*, not just someone who can entertain them.
+* **Rural Setting:** Parks are fantastic, but also means the dog will be largely alone, which is a significant commitment.
+
+**2. Dog Breed Recommendations (Considering Your Criteria)**
+
+Given your situation, let's focus on breeds that are generally good for low-energy, independent dogs with a love for the outdoors:
+
+* **Basset Hound:**  Low-energy, gentle, and adaptable to smaller spaces. They’re happy with short walks and plenty of time alone. Their lower energy levels make them a good fit for a busy schedule.
+* **Corgi (Miniature or Standard):**  Active, but not overly demanding. They’re intelligent and trainable, enjoying walks and playtime. They’re also relatively low-maintenance in terms of grooming.
+* **Basenji:** These dogs are independent and don't require a lot of attention. They enjoy short walks and are happy to spend time alone.
+
+**3. Cost Considerations – Realistic Budgeting**
+
+* **Initial Costs:** (approximate - prices can vary greatly)
+    * **Initial Costs:** $500 - $1,500 (depending on breed and breeder) – Consider adopting from a rescue or shelter first to save on initial costs.
+    * **Food:** $30 - $75/month (based on food type) - Budget this carefully, especially if you’re adopting.
+    * **Treats/Toys:** $10 - $20/month – Small toys are key!
+* **Ongoing Costs:**
+    * **Vet Care:** *This is where you'll need to be cautious*.  Look for vets with reasonable rates and prioritize preventative care (vaccinations, parasite control).  *Estimate: $50-100/year*.
+    * **Food:** $30 - $75/month (Again, consider a budget)
+    * **Licensing & Registration:** $20-50/year (check local requirements)
+    * **Pet Insurance (Highly Recommended):**  $30-100/month - This can be a huge benefit to have in case of emergencies.
+
+**4.  Key Things to Focus On (Given Limited Budget & Time)**
+
+* **Training:**  *Absolutely crucial*.  Even low-energy breeds need training – obedience, recall, and socialization.  Consider a short, focused training class. ($50-$100/class)
+* **Exercise:** Short, frequent walks are better than long, infrequent ones. 15-20 minutes of focused activity is great.
+* **Socialization:** Early socialization is vital for any dog, but especially for teenagers. 
+* **Love & Attention:**  Your dogs will need your affection and attention, even if it’s short bursts.
+
+**5. Resources to Explore**
+
+* **ASPCA:** [https://www.aspca.org/](https://www.aspca.org/) - Offers breed information, adoption resources, and pet care tips.
+* **Rescue Websites:** [https://www.rescuedogs.org/](https://www.rescuedogs.org/) -  You can find dogs needing homes.
+* **Local Veterinarians:** Research vets in your area – look for reviews and see if they offer affordable services.
+
+**To help me give you even more personalized advice, could you tell me:**
+
+*   **What’s your approximate monthly budget for a dog, including food, vet care, and other supplies?** (A range is fine!)
+*   **Are there any breeds you absolutely *don't* want?** (e.g., high-energy, prone to certain issues)
+*   **What kind of activities do the kids enjoy that you'd like the dog to participate in?** (e.g., hiking, playing fetch, just being present)
 
 ---
-
-### **Key Considerations for Your Situation**  
-1. **Time Constraints**  
-   - **Your schedule**: You’re away from 8am–6pm, leaving the dog alone for 10+ hours.  
-   - **Solution**: Choose a **low-energy, independent breed** that can cope with being alone. Avoid high-energy or anxious breeds (e.g., Border Collies, Herding dogs).  
-   - **Recommended Breeds**:  
-     - **Basset Hound**: Calm, low-maintenance, and great for walks.  
-     - **Corgi**: Friendly and adaptable, though they may need mental stimulation.  
-     - **Labrador Retriever (if budget allows)**: Intelligent and social, but requires consistent attention.  
-
-2. **Vet Costs**  
-   - **Budget**: You mentioned limited funds, so prioritize **healthier breeds** with lower vet expenses.  
-   - **Tips**:  
-     - Opt for **mixed-breed dogs** (often healthier and cheaper to adopt).  
-     - Adopt from a shelter or rescue to reduce initial costs (e.g., adoption fees, vaccinations).  
-     - Choose a breed with **fewer genetic health issues** (e.g., Basset Hounds are generally healthy, though they may need regular ear care).  
-
-3. **Family Dynamics**  
-   - **Teenagers**: They can help with feeding or walks after school, but ensure the dog isn’t left alone for too long.  
-   - **Rambles in the countryside**: A dog that enjoys walks and outdoor activities is ideal.  
-
-4. **Space & Environment**  
-   - **Living near a park**: Perfect for daily walks and exercise.  
-   - **Small breed**: If you prefer a smaller dog, consider breeds like **Poodles** (low energy, hypoallergenic) or **Beagles** (affordable and friendly).  
-
----
-
-### **Top Breeds for Your Needs**  
-1. **Basset Hound**  
-   - **Why**: Low energy, calm, and great for walks.  
-   - **Cost**: Affordable food (e.g., $20–$50/month) and minimal vet costs if healthy.  
-   - **Note**: They may need regular ear cleaning and are prone to obesity, so diet is key.  
-
-2. **Mixed-Breed Dog (e.g., Rescue or Shelter)**  
-   - **Why**: Often healthier, cheaper to adopt, and less likely to have genetic issues.  
-   - **Cost**: Adoption fees (often $50–$200) + basic vet care.  
-
-3. **Labrador Retriever (if budget allows)**  
-   - **Why**: Friendly, social, and great for families.  
-   - **Cost**: Higher initial costs but may qualify for low-cost programs or adoption.  
-
-4. **Poodle (Miniature or Toy)**  
-   - **Why**: Low energy, hypoallergenic, and easy to train.  
-   - **Cost**: Moderate food costs and regular grooming.  
-
----
-
-### **Practical Tips**  
-- **Adopt a Dog with a "Good" History**: Look for dogs that are calm, not prone to separation anxiety, and have been socialized.  
-- **Budget for Basics**:  
-  - **Food**: $20–$50/month for small breeds.  
-  - **Vet Care**: Prioritize annual check-ups and vaccinations.  
-  - **Toys**: Invest in durable items to keep the dog entertained when alone.  
-- **Involve Your Kids**: Let them help with feeding or walks to build a bond and reduce your workload.  
-- **Check for Local Rescues**: Many shelters offer low-cost adoption and spay/neuter programs.  
-
----
-
-### **Final Recommendations**  
-- **Avoid**: High-energy breeds (e.g., Border Collies), dogs prone to separation anxiety, or breeds with high vet costs (e.g., some purebreds).  
-- **Prioritize**: A calm, low-energy dog with minimal health needs and a friendly temperament.  
-
-If you’re open to it, **adopting from a rescue** could be a great option—many dogs are eager for a home and may already be trained or healthy. Let me know if you’d like help finding local shelters or breed-specific advice! 🐾
-
----
-*Response generated in 15.39 seconds.*
-*Model: qwen3:8b | Embeddings: nomic-embed-text*
+*Response generated in 3.94 seconds.*
+*Model: gemma3:1b | Embeddings: nomic-embed-text*

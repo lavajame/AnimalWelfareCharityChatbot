@@ -64,7 +64,7 @@ print(f"Response generated in {runtime:.2f} seconds.")
 
 # 7. Save to Markdown
 output_filename = "showcase.md"
-markdown_content = f"""# Infrastructure Showcase: Dogs Trust Chatbot Assistant
+markdown_content = f"""# Infrastructure Showcase: Dog Welfare Chatbot Assistant
 
 **Repository:** [Animal Welfare Charity Chatbot](https://github.com/AnimalWelfareCharityChatbot)
 

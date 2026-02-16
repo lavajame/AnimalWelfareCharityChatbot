@@ -1,7 +1,7 @@
 # Configuration file for AI Chatbot
 
 # Model Settings
-MODEL_NAME = "qwen3:8b"
+MODEL_NAME = "gemma3:1b"
 EMBEDDING_MODEL_NAME = "nomic-embed-text"
 RETRIEVAL_K = 10
 
