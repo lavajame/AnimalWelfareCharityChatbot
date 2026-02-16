@@ -46,3 +46,9 @@ pip install -r requirements.txt
 
 # Run the chatbot
 streamlit run UIChat.py
+```
+
+## 🙏 Credits
+
+This project is based on and inspired by the work of [D-artisan/ai-chatbot](https://github.com/D-artisan/ai-chatbot).
+
