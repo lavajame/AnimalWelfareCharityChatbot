@@ -3,14 +3,19 @@ import json
 from datetime import datetime
 import streamlit as st
 from langchain_ollama import ChatOllama
-from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_core.chat_history import InMemoryChatMessageHistory
+
+from langchain_core.documents import Document
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaEmbeddings
-import speech_recognition as sr
-import pyttsx3
+import config
+
+
+model_ = config.MODEL_NAME
+
 
 # === Chat History Disk Persistence ===
 HISTORY_DIR = "chat_history"
@@ -32,37 +37,35 @@ def save_history(messages):
     with open(filepath, "w") as f:
         json.dump([{"type": msg.type, "content": msg.content} for msg in messages], f, indent=2)
 
-# === Voice Engine Setup ===
-engine = pyttsx3.init()
-engine.setProperty('rate', 175)
+# === Context Data Loading ===
+def load_context_data(filepath="context_data.json"):
+    docs = []
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, "r") as f:
+                data = json.load(f)
+                for key, value in data.items():
+                    # Format as "Key: Value" for better retrieval context
+                    content = f"{key}: {value}"
+                    docs.append(Document(page_content=content, metadata={"source": "context_data"}))
+        except Exception as e:
+            st.error(f"Error loading context data: {e}")
+    return docs
 
-def speak(text):
-    engine.say(text)
-    engine.runAndWait()
 
-def recognize_speech():
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("🎤 Listening...")
-        audio = recognizer.listen(source)
-    try:
-        return recognizer.recognize_google(audio)
-    except sr.UnknownValueError:
-        st.warning("Could not understand audio")
-    except sr.RequestError as e:
-        st.error(f"Speech recognition error: {e}")
-    return ""
+
 
 # === Streamlit UI Setup ===
 st.set_page_config(page_title="Local Chatbot", page_icon="")
-st.title("Daniel's ChatBot")
+st.title("Dogs Trust ChatBot")
 
 # === Sidebar System Prompt ===
 with st.sidebar:
     st.subheader("🤖 Bot Personality")
-    system_prompt = st.text_area("Set system prompt (personality)", value="You are a helpful, witty, concise assistant.")
-    use_voice_input = st.checkbox("🎙️ Use voice input")
-    use_voice_output = st.checkbox("🔊 Use voice output")
+    system_prompt = st.text_area("Set system prompt (personality)", value=config.SYSTEM_MESSAGE)
+
+
+
 
 # === Initialise Session State ===
 if "chat_history" not in st.session_state:
@@ -78,10 +81,15 @@ if "chat_history" not in st.session_state:
             st.session_state.messages.append(AIMessage(content=msg["content"]))
 
 # === LLM Setup ===
-llm = ChatOllama(model="llama3.2:3b")
+llm = ChatOllama(model=model_)
 retriever = None
 
-# === Document Upload ===
+# === Load Context & Documents ===
+# Always load static context data
+context_docs = load_context_data()
+all_docs = context_docs.copy()
+
+# Document Upload
 uploaded_file = st.file_uploader("\U0001F4C4 Upload a PDF or .txt file", type=["pdf", "txt"])
 
 if uploaded_file is not None:
@@ -96,10 +104,16 @@ if uploaded_file is not None:
     docs = loader.load()
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     chunks = splitter.split_documents(docs)
+    all_docs.extend(chunks)
 
-    embeddings = OllamaEmbeddings(model="llama3.2:3b")
-    db = FAISS.from_documents(chunks, embeddings)
+
+# Initialize Vector Store if we have any documents (context or uploaded)
+if all_docs:
+    embeddings = OllamaEmbeddings(model=config.EMBEDDING_MODEL_NAME)
+    db = FAISS.from_documents(all_docs, embeddings)
     retriever = db.as_retriever()
+
+
 
 # === Display Chat History ===
 for msg in st.session_state.messages:
@@ -109,28 +123,43 @@ for msg in st.session_state.messages:
         st.chat_message("assistant", avatar="\U0001F916").write(msg.content)
 
 # === Chat Input ===
-user_input = None
-if use_voice_input:
-    if st.button("🎙️ Speak"):
-        user_input = recognize_speech()
-else:
-    user_input = st.chat_input("Ask me anything...")
+user_input = st.chat_input("Ask me anything...")
+
 
 if user_input:
     st.chat_message("user", avatar="\U0001F464").write(user_input)
     st.session_state.chat_history.add_user_message(user_input)
 
+    user_input_with_context = user_input
     if retriever:
-        context_docs = retriever.invoke(user_input)
-        context_text = "\n\n".join([doc.page_content for doc in context_docs[:3]])
-        user_input_with_context = f"Context:\n{context_text}\n\nQuestion: {user_input}"
-    else:
-        user_input_with_context = user_input
-
+        retrieved_docs = retriever.invoke(user_input)
+        if retrieved_docs:
+            context_text = "\n\n".join([doc.page_content for doc in retrieved_docs[:3]])
+            user_input_with_context = f"Context:\n{context_text}\n\nQuestion: {user_input}"
+    
     if not st.session_state.messages:
-        st.session_state.chat_history.add_ai_message(system_prompt)
+        messages_to_send = [SystemMessage(content=system_prompt)] + st.session_state.chat_history.messages + [HumanMessage(content=user_input_with_context)]
+    else:
+        # Prepend system prompt if it's not already in history (it's not saved to history list)
+        messages_to_send = [SystemMessage(content=system_prompt)] + st.session_state.chat_history.messages[:-1] + [HumanMessage(content=user_input_with_context)]
 
-    response = llm.invoke(st.session_state.chat_history.messages + [HumanMessage(content=user_input_with_context)])
+    # We need to make sure we don't duplicate the last human message which is already in history
+    # The original code logic for history management was a bit loose.
+    # Let's clean it up:
+    # 1. Add current user msg to history (done above)
+    # 2. Construct prompt: System + History (which now includes current msg)
+    # 3. BUT we want to inject context into the LAST message of the history for the LLM, 
+    #    without altering the displayed history.
+    
+    # Correct approach:
+    history_messages = st.session_state.chat_history.messages
+    # Make a copy of the last message (User's input) and modify it with context
+    last_msg = history_messages[-1] 
+    last_msg_with_context = HumanMessage(content=user_input_with_context)
+    
+    final_messages = [SystemMessage(content=system_prompt)] + history_messages[:-1] + [last_msg_with_context]
+    
+    response = llm.invoke(final_messages)
 
     st.session_state.chat_history.add_ai_message(response.content)
     st.session_state.messages.append(HumanMessage(content=user_input))
@@ -139,5 +168,4 @@ if user_input:
 
     st.chat_message("assistant", avatar="\U0001F916").write(response.content)
 
-    if use_voice_output:
-        speak(response.content)
+

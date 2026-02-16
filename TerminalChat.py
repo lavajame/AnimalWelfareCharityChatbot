@@ -4,11 +4,15 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables import RunnableWithMessageHistory
 from langchain_core.chat_history import InMemoryChatMessageHistory
 
-llm = ChatOllama(model="mistral:7b")
+import config
+
+model_ = config.MODEL_NAME
+llm = ChatOllama(model=model_)
 
 system_message = SystemMessage(
-    content="You are a helpful, witty, and concise personal assistant who speaks in a friendly tone."
+    content=config.SYSTEM_MESSAGE
 )
+
 
 prompt = ChatPromptTemplate.from_messages([
     system_message,
